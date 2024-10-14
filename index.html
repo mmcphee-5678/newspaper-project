@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<title> Newspaper Landing Page </title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+    <header>
+        <h1> Animal News </h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="article.html"> Article </a></li>
+                <li><a href="gallery.html"> Gallery </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="featured-article">
+            <img src="images/img whale shark.jpg" alt="imgwhaleshark" class="image-item">
+            <h2> Featured Article: The Endangered Whale Shark </h2>
+            <p>
+            The whale shark (Rhincodon typus), the largest fish in the ocean, is an endangered species facing numerous threats. Despite their enormous size, these gentle giants are filter feeders, relying on plankton and small fish for nourishment. Their populations are declining due to habitat destruction, illegal fishing, and bycatch in commercial fisheries. Additionally, ship strikes and ocean pollution, particularly from plastic waste, pose significant dangers to their survival. Conservation efforts, including the establishment of marine protected areas and stricter fishing regulations, are critical for ensuring the long-term survival of this remarkable species.
+            </p>
+        </section>
+
+        <section class="latest-news">
+            <h2> Latest News </h2>
+            <h3>Cats Disappearing</h3>
+            <p>Alarming Trend: Cats Mysteriously Disappearing in Communities Worldwide</p>
+
+            <h3>Polar Bears in Peril</h3>
+            <p>Polar Bears in Peril: Melting Ice Leaves Iconic Species Homeless</p>
+
+            <h3>Dogs Needing Homes</h3>
+            <p>Rising Crisis: Surge in Dogs Filling Pet Shelters Amid Adoption Slowdown</p>
+
+            <h3> Animals in Africa</h3>
+            <p>Exploring the Majestic Wildlife of Africa: A Closer Look at the Continent's Iconic Animals</p>
+
+            <h3>Sharks</h3>
+            <p>Unveiling the Real Dangers of Sharks: Myths, Misconceptions, and Their Vital Role in the Ocean</p>
+            
+        </section>
+
+        <section class="more-news">
+            <h2> In Case You Missed It </h2>
+            <h3>Sharks at the Beach</h3>
+            <p>Understanding Safety, Behavior, and Coexisting with These Ocean Predators</p>
+
+            <h3>Sloths</h3>
+            <p>Slow and Steady: Discovering the Fascinating World of Sloths and Their Unique Lifestyle</p>
+
+        </section>
+        
+    </main>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener ('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Marine Conservation Initiative</p>
+    </footer>
+
+    
+</body>

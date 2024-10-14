@@ -1,0 +1,221 @@
+/* Font Style */
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000;
+    font-size:xx-large;
+}
+
+
+/* layout of title and nav bar is horizontal, 
+nav links are spaced out evenly, 
+removed the default list and link styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* center navigation items */
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* hamburger menu style */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* hide regular navigation items on smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* show hamburger menu */
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none; /* initially hide navigation items */
+    }
+
+    /* when clicking the hamburger menu, use JavaScript to toggle this class to display itmes */
+    nav ul.active {
+        display: flex; /* display navigation items in a column */
+    }
+}
+
+/* responsive grid that adjusts column count based on 
+screen size with min. width */
+main {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* centered horizontally and vertically with padding 
+and background color */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    background-color: #00796b;
+    color: white;
+}
+
+/* centers the header and spaces them out vertically */
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* simple readable structure */
+.article-content {
+    display: grid;
+    grid-template-columns: 1fr; /*single column layout */
+    gap: 20px;
+    padding: 80px;
+    align-items: center;
+}
+
+/* position sidebar alongside the main content */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3:1 ratio */
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.advertisement {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+
+/* For the gallery */
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+    background: #444;
+    
+}
+
+.slider-wrapper .slide-button#pre-slide {
+    left: -20px;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -20px;
+}
+
+.slider-wrapper .image-list {
+    display:grid;
+    gap: 18px;
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400;
+    object-fit: cover;
+}
+
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #000;
+    border-radius: inherit;
+    cursor: grab;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
